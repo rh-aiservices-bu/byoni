@@ -46,3 +46,9 @@ oc -n redhat-ods-applications apply -f ./images/pytorch-with-audio/pytorch-with-
 oc -n redhat-ods-applications apply -f ./images/elyra/elyra.yaml
 ```
 
+### R
+
+```bash
+oc -n redhat-ods-applications apply -f ./images/r/r.yaml
+```
+
