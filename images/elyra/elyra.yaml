@@ -4,6 +4,7 @@ apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
   name: elyra-notebook
+  namespace: redhat-ods-applications
   labels:
     opendatahub.io/notebook-image: "true"
     component.opendatahub.io/name: jupyterhub
