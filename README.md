@@ -27,13 +27,22 @@ Because you are working in the same Namespace as RHODS (`redhat-ods-application`
 
 ## Instructions
 
+### Clone the project
+
 ```bash
 git clone https://github.com/rh-aiservices-bu/byoni.git
 cd ./byoni
 ```
 
+### Pytorch with Audio
+
 ```bash
 oc -n redhat-ods-applications apply -f ./images/pytorch-with-audio/pytorch-with-audio.yaml
-
-
 ```
+
+### Elyra
+
+```bash
+oc -n redhat-ods-applications apply -f ./images/elyra/elyra.yaml
+```
+
