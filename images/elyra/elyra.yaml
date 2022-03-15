@@ -3,16 +3,17 @@
 apiVersion: image.openshift.io/v1
 kind: ImageStream
 metadata:
-  name: s2i-lab-elyra
+  name: elyra-notebook
   labels:
     opendatahub.io/notebook-image: "true"
     component.opendatahub.io/name: jupyterhub
     opendatahub.io/component: 'true'
     byoni: 'true'
   annotations:
-    opendatahub.io/notebook-image-name: "Elyra Notebook Image"
+    opendatahub.io/notebook-image-name: "Elyra Notebook"
     opendatahub.io/notebook-image-url: "https://github.com/thoth-station/s2i-lab-elyra"
     opendatahub.io/notebook-image-desc: "Jupyter notebook image with Elyra-AI installed"
+    opendatahub.io/notebook-image-order: '200'
 spec:
   lookupPolicy:
     local: true
