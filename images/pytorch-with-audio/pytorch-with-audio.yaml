@@ -6,6 +6,7 @@ metadata:
   annotations:
     opendatahub.io/notebook-image-name: PyTorch - with support for Audio Files
     opendatahub.io/notebook-image-desc: This is the same as the other PyTorch image, except with support for audio files.
+    opendatahub.io/notebook-image-order: '200'
   labels:
     opendatahub.io/notebook-image: 'true'
     component.opendatahub.io/name: jupyterhub

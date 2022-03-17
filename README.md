@@ -32,6 +32,7 @@ Because you are working in the same Namespace as RHODS (`redhat-ods-application`
 ```bash
 git clone https://github.com/rh-aiservices-bu/byoni.git
 cd ./byoni
+git pull
 ```
 
 ### Pytorch with Audio
