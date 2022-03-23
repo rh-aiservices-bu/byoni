@@ -53,3 +53,8 @@ oc -n redhat-ods-applications apply -f ./images/elyra/elyra.yaml
 oc -n redhat-ods-applications apply -f ./images/r/r.yaml
 ```
 
+### OptaPy
+
+```bash
+oc -n redhat-ods-applications apply -f ./images/optapy/optapy.yaml
+```
