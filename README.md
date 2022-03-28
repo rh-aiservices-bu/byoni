@@ -58,3 +58,9 @@ oc -n redhat-ods-applications apply -f ./images/r/r.yaml
 ```bash
 oc -n redhat-ods-applications apply -f ./images/optapy/optapy.yaml
 ```
+
+### SageMath
+
+```bash
+oc -n redhat-ods-applications apply -f ./images/sagemath/sagemath.yaml
+```
