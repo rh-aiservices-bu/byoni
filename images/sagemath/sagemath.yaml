@@ -1,0 +1,30 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  name: sagemath-notebook
+  namespace: redhat-ods-applications
+  labels:
+    opendatahub.io/notebook-image: 'true'
+    component.opendatahub.io/name: jupyterhub
+    opendatahub.io/component: 'true'
+    byoni: 'true'
+  annotations:
+    opendatahub.io/notebook-image-name: 'SageMath Notebook'
+    opendatahub.io/notebook-image-desc: 'JupyterLab notebook image with SageMath.'
+    opendatahub.io/notebook-image-order: '200'
+    opendatahub.io/notebook-image-url: 'https://github.com/guimou/custom-notebooks/tree/main/sagemath-notebook'
+spec:
+  lookupPolicy:
+    local: true
+  tags:
+    - name: 'latest'
+      annotations:
+        opendatahub.io/notebook-python-dependencies: '[{"name":"SageMath","version":"9.3-3"}]'
+        opendatahub.io/notebook-software: '[{"name":"BYO Notebook Image -
+          SageMath","version":"9.3"},{"name":"Python","version":"v3.9.10"}]'
+      from:
+        kind: DockerImage
+        name: quay.io/guimou/s2i-minimal-data-science-sagemath-notebook:latest
+      referencePolicy:
+        type: Source
