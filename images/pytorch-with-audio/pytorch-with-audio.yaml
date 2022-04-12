@@ -16,7 +16,7 @@ spec:
   lookupPolicy:
     local: true
   tags:
-    - name: v02
+    - name: v03
       annotations:
         opendatahub.io/notebook-python-dependencies: >-
           [{"name":"PyTorch","version":"1.8"},{"name":"Tensorboard","version":"1.15"},{"name":"Boto3","version":"1.17"},{"name":"Kafka-Python","version":"2.0"},{"name":"Matplotlib","version":"3.4"},{"name":"Numpy","version":"1.19"},{"name":"Pandas","version":"1.2"},{"name":"Scikit-learn","version":"0.24"},{"name":"Scipy","version":"1.6"},{"name":"TTS","version":"0.6.0"}]
@@ -40,6 +40,7 @@ spec:
       RUN dnf -y install libsndfile
       USER 1001
       RUN pip install tts==0.6.0
+      RUN pip install nbgitpuller==1.1.0
   strategy:
     type: Docker
     dockerStrategy:
@@ -54,7 +55,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'pytorch-with-audio:v02'
+      name: 'pytorch-with-audio:v03'
   triggers:
     - type: ImageChange   ## if the source image (pytorch:py3.8-cuda-11.0.3-1) gets rebuilt, it will trigger a rebuild
       imageChange: {}
